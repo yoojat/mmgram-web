@@ -9600,10 +9600,10 @@
     "react-fast-compare" "^3.2.0"
     "shallowequal" "^1.1.0"
 
-"react-hook-form@^7.21.0":
-  "integrity" "sha512-aekCf+dedYFIg+7nCK2acMvZ+s6Ohw2I7UNQ+zNIadBl1SoXow2Tl6c3F49xF8GFCdn5jeK43JHH26rmtdRyLQ=="
-  "resolved" "https://registry.npmjs.org/react-hook-form/-/react-hook-form-7.21.0.tgz"
-  "version" "7.21.0"
+"react-hook-form@^6.15.1":
+  "integrity" "sha512-bL0LQuQ3OlM3JYfbacKtBPLOHhmgYz8Lj6ivMrvu2M6e1wnt4sbGRtPEPYCc/8z3WDbjrMwfAfLX92OsB65pFA=="
+  "resolved" "https://registry.npmjs.org/react-hook-form/-/react-hook-form-6.15.1.tgz"
+  "version" "6.15.1"
 
 "react-is@^16.6.0":
   "integrity" "sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ=="
@@ -11618,6 +11618,11 @@
   dependencies:
     "punycode" "1.3.2"
     "querystring" "0.2.0"
+
+"use-react-form@^0.0.1":
+  "integrity" "sha512-ErRcvRjf3be5x1ujvN6WiZIDZIz3GfCk/U/h6e/MzqlC6reMKOQ/u13bk8g/BtAcrwuYxIHArz4/w0utvS7QTg=="
+  "resolved" "https://registry.npmjs.org/use-react-form/-/use-react-form-0.0.1.tgz"
+  "version" "0.0.1"
 
 "use@^3.1.0":
   "integrity" "sha512-cwESVXlO3url9YWlFW/TA9cshCEhtu7IKJ/p5soJ/gGpj7vbvFrAY/eIioQ6Dw23KjZhYgiIo8HOs1nQ2vr/oQ=="
