@@ -60,8 +60,7 @@ const Login: React.FC = () => {
   const {
     register,
     handleSubmit,
-    errors,
-    formState,
+    formState: { errors, isValid },
     getValues,
     setError,
     clearErrors,
@@ -114,28 +113,23 @@ const Login: React.FC = () => {
         <Notification>{location?.state?.message}</Notification>
         <form onSubmit={handleSubmit(onSubmitValid)}>
           <Input
-            ref={register({
-              required: 'Username is required',
+            {...register('username', {
               minLength: {
                 value: 4,
                 message: 'Username should be longer than 4 chars.',
+                // pattern : "" // reg vaildate
+                // validate: (currentValue) => currentValue.includes("potato")
               },
-              // pattern : "" // reg vaildate
-              // validate: (currentValue) => currentValue.includes("potato")
             })}
             onChange={clearLoginError}
-            name='username'
             type='text'
             placeholder='Username'
             hasError={Boolean(errors?.username?.message)}
           />
           <FormError message={errors?.username?.message} />
           <Input
-            ref={register({
-              required: 'Password is required.',
-            })}
+            {...register('password')}
             onChange={clearLoginError}
-            name='password'
             type='password'
             placeholder='Password'
           />
@@ -143,7 +137,7 @@ const Login: React.FC = () => {
           <Button
             type='submit'
             value={loading ? 'Loading...' : 'Log in'}
-            disabled={!formState.isValid || loading}
+            disabled={!isValid || loading}
           />
           <FormError message={errors?.result?.message} />
         </form>

@@ -89,39 +89,28 @@ function SignUp() {
         </HeaderContainer>
         <form onSubmit={handleSubmit(onSubmitValid)}>
           <Input
-            ref={register({
-              required: 'First Name is required.',
-            })}
-            name='firstName'
+            {...register('firstName', { required: 'First Name is required.' })}
             type='text'
             placeholder='First Name'
           />
           <Input
-            ref={register}
+            {...register('lastName', { required: 'Username is required.' })}
             type='text'
             placeholder='Last Name'
-            name='lastName'
           />
           <Input
-            ref={register({
-              required: 'Email is required.',
-            })}
-            name='email'
+            {...register('email', { required: 'Email is required.' })}
             type='text'
             placeholder='Email'
           />
           <Input
-            ref={register({
-              required: 'Username is required.',
-            })}
+            {...register('username', { required: 'Username is required.' })}
             name='username'
             type='text'
             placeholder='Username'
           />
           <Input
-            ref={register({
-              required: 'Password is required.',
-            })}
+            {...register('password', { required: 'Password is required.' })}
             name='password'
             type='password'
             placeholder='Password'
